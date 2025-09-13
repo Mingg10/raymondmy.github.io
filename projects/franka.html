@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Franka Panda Block Stacking Competition · Raymond Yang</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <a href="../index.html" class="back-link">&larr; Back to Home</a>
+  <h1>Franka Block Stacking Competition</h1>
+  <p class="subtitle">Franka Emika Panda 7-DOF robot arm control</p>
+</header>
+
+<main class="project-page">
+  <!-- Main Hero Image -->
+  <img src="../assets/img/franka/thumb.png" alt="Franka Hero" class="project-img">
+
+  <!-- Overview -->
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This project explored vision-guided manipulation using the Franka Emika Panda robotic arm. I developed the trajectory planning and kinematics pipeline that generated smooth motions for grasping and stacking, and I integrated AprilTag-based vision to detect and localize the blocks. By combining motion planning with vision feedback, the system successfully stacked seven blocks with over ninety percent accuracy and placed second in a university competition.
+    </p>
+  </section>
+
+  <!-- Additional Images -->
+  <div class="project-gallery">
+    <img src="../assets/img/franka/Achievement.jpg" alt="Achievement picture"/>
+    <img src="../assets/img/franka/Pick.gif" alt="Competetion" class="project-gif" />
+    <img src="../assets/img/franka/Gazebo.png" alt="Simulation" /> 
+  </div>
+
+  <!-- Key Contributions -->
+  <section>
+    <h2>My Contributions</h2>
+    <ul>
+      In this project, I was responsible for developing the kinematics and path planning framework for the Franka Emika Panda robot. I implemented trajectory generation and motion control to ensure smooth grasping and stacking, and helped integrate AprilTag-based localization to improve positioning accuracy during both static and dynamic block stacking tasks.
+    </ul>
+  </section>
+
+  <!-- Technical Stack -->
+  <section>
+    <h2>Technologies</h2>
+    <p><strong>Tools:</strong> Franka Emika Panda · ROS · Gazebo · Python · AprilTag detection · Inverse kinematics · Trajectory planning</p>
+    <p><strong>Platform:</strong> Ubuntu 20.04 + ROS1</p>
+  </section>
+
+  <!-- Reflection -->
+  <section>
+    <h2>What I Learned</h2>
+    <p>
+      Through this project,I learned how to connect vision feedback with motion planning, how crucial calibration is for grasping accuracy, and how to balance trajectory complexity with reliable real-world execution.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIO-based Quadcopter · Raymond Yang</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <a href="../index.html" class="back-link">&larr; Back to Home</a>
+  <h1>VIO-based Quadcopter</h1>
+  <p class="subtitle">Visual-Inertial Odometry-Based Autonomous Quadcopter</p>
+</header>
+
+<main class="project-page">
+  <!-- Main Hero Image -->
+  <img src="../assets/img/quadcopter/thumb.png" alt="QUadcopter Hero" class="project-img">
+
+  <!-- Overview -->
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This project focused on enabling fully autonomous quadcopter navigation in a GPS-denied environment using only onboard sensing. Our primary goal was to implement and integrate stereo visual-inertial odometry (VIO), an SE(3) controller, and minimum-snap trajectory planning, allowing the quadrotor to navigate and avoid obstacles using real-time onboard state estimation. This was part of a capstone project for MEAM 620 at the University of Pennsylvania.
+    </p>
+  </section>
+
+  <!-- Additional Images -->
+  <div class="project-gallery">
+    <img src="../assets/img/quadcopter/environment.png" alt="Complex environment"/>
+    <img src="../assets/img/quadcopter/tune.gif" alt="rover" class="project-gif" />
+    <img src="../assets/img/quadcopter/crazyflight.png" alt="Sparse command" /> 
+  </div>
+
+
+  <!-- Key Contributions -->
+  <section>
+    <h2>My Contributions</h2>
+    <ul>
+      <li>Developed a stereo VIO estimator that fused IMU readings with feature-tracked stereo images using a tightly coupled filter.</li>
+      <li>Tuned and validated the estimator in a Unity-based simulation environment with realistic noise and frame rates.</li>
+      <li>Integrated VIO with an SE(3) geometric controller, modifying control gains and smoothing state estimates to ensure stable flight.</li>
+      <li>Implemented a 3D minimum snap trajectory planner and enabled dynamic replanning in obstacle-rich environments.</li>
+      <li>Built visual debugging tools to track estimation drift, camera coverage, and trajectory tracking performance.</li>
+      <li>Created test cases to validate estimator performance under sensor delay, noisy features, and aggressive maneuvers.</li>
+    </ul>
+  </section>
+
+  <!-- Technical Stack -->
+  <section>
+    <h2>Technologies</h2>
+    <p><strong>Tools:</strong> ROS1 · Python · Visual-inertial odometry (VIO) · Extended Kalman Filter (EKF) design · SE(3) geometric control · System integration and tuning</p>
+    <p><strong>Platform:</strong> Ubuntu 20.04 + ROS1</p>
+  </section>
+
+  <!-- Reflection -->
+  <section>
+    <h2>What I Learned</h2>
+    <p>
+This project taught me how challenging it is to bring a quadrotor from simulation into real flight. I learned the importance of sensor fusion for stable state estimation, the limits of PID tuning under changing flight conditions, and how battery constraints, vibration, and safety concerns shape design decisions. It showed me how to integrate mechanical, electrical, and software components into a single reliable system, and how critical simulation-first testing is before flying hardware.    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
+</footer>
+
+</body>
+</html>

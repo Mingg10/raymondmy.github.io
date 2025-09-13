@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NASA LuSTR · Raymond Yang</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <a href="../index.html" class="back-link">&larr; Back to Home</a>
+  <h1>NASA LuSTR</h1>
+  <p class="subtitle">Multi-Robot Cooperation Platform</p>
+</header>
+
+<main class="project-page">
+  <!-- Main Hero Image -->
+  <img src="../assets/img/nasa/thumb.jpg" alt="NASA Project Hero" class="project-img">
+
+  <!-- Overview -->
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This project explores autonomous multi-robot cooperation for mobile truss construction and deployment. Our primary objective is to develop a system where modular robotic platforms can dock with each other and maintain structural and kinematic coordination while moving as a unified unit.
+
+      Each rover is equipped with an onboard manipulator and turret-based docking system, allowing it to autonomously connect to other agents and payload modules. Once docked, the system can execute synchronized motion, enabling complex operations like relocating large truss structures or assembling components in harsh environments—such as extraterrestrial or remote terrestrial construction sites.
+
+      The project leverages ROS 2, real-time multi-agent communication, and modular hardware/software architecture. Outdoor field tests demonstrate the feasibility of dynamic, locomotion-coupled cooperative behaviors, pushing the frontier of autonomous robotic construction.    
+    </p>
+  </section>
+
+  <!-- Additional Images -->
+  <div class="project-gallery">
+    <img src="../assets/img/nasa/trusses.gif" alt="Field test with truss" class="project-gif"/>
+    <img src="../assets/img/nasa/docking.jpg" alt="Docking system close-up" />
+    <img src="../assets/img/nasa/DM_CAD.png" alt="Docking mechanism CAD" />
+    <img src="../assets/img/nasa/SZT_CAD.png" alt="Spiral Zipper CAD" />
+    <img src="../assets/img/nasa/rover.gif" alt="Wheel-based rover" class="project-gif" />
+    <img src="../assets/img/nasa/spirit.jpg" alt="Sensor + wiring inside turret" />
+  </div>
+
+  <!-- Key Contributions -->
+  <section>
+    <h2>My Contributions</h2>
+    <ul>
+      <li>Actuation System Integration: Implemented and configured wheel-side actuators (motors), integrating them into the hardware architecture for mobility and docking.</li>
+      <li>Sensor Feedback Loop: Collaborated on feedback control using wheel encoders and GPS, enabling closed-loop navigation via ROS 2 control stack.</li>
+      <li>Docking System: Contributed to both the mechanical design and control logic for the docking module, ensuring smooth engagement and dynamic alignment with the docking station</li>
+      <li>Turret System: Designed and assembled the electronics mounting system for the turret, and developed control routines using ROS 2 nodes for positioning and operation.</li>
+    </ul>
+  </section>
+
+  <!-- Technical Stack -->
+  <section>
+    <h2>Technologies</h2>
+    <p><strong>Tools:</strong> ROS2 · C++ · Python · SolidWorks · 3D Printing · Sensors (IMU, GPS, Encoders)</p>
+    <p><strong>Platform:</strong> Ubuntu 22.04 + ROS2 Node + Raspberry Pi4</p>
+  </section>
+
+  <!-- Reflection -->
+  <section>
+    <h2>What I Learned</h2>
+    <p>
+      This project taught me how to go beyond simulations and bring complex systems into the real world — where battery limits, uneven terrain, dust, and hardware failure are part of the challenge. I learned how to design for robustness, debug fast under pressure, and collaborate across both hardware and software teams.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
+</footer>
+
+</body>
+</html>

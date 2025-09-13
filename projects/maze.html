@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arena Battle Robot · Raymond Yang</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <a href="../index.html" class="back-link">&larr; Back to Home</a>
+  <h1>Maze Solving Robot</h1>
+  <p class="subtitle">Python Programmed ESP32 Maze Solving Robot</p>
+</header>
+
+<main class="project-page">
+  <!-- Main Hero Image -->
+  <img src="../assets/img/maze/thumb.png" alt="Arena Battle" class="project-img">
+
+  <!-- Overview -->
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This project aimed to build a fully autonomous rover capable of navigating a predefined maze, detecting blocks, and transporting them to a target location without human intervention. The rover used multiple ultrasonic, IR and ToF sensors, and Python control logic. Localization was achieved using Monte Carlo Localization (MCL), where range sensor measurements were compared against an occupancy grid map to estimate position and orientation. Although the complete maze run took over nine minutes, the system successfully demonstrated end-to-end autonomy including obstacle avoidance, localization, and block transport.    
+    </p>
+  </section>
+
+  <!-- Additional Images -->
+  <div class="project-gallery">
+    <img src="../assets/img/maze/compet.gif" alt="Competition" class="project-gif"/>
+    <img src="../assets/img/maze/gripper.png" alt="Gripper" />
+    <img src="../assets/img/maze/solving.jpg" alt="robot" />
+  </div>
+
+  <!-- Key Contributions -->
+  <section>
+    <h2>My Contributions</h2>
+    <ul>
+    I designed and assembled the hardware platform, implemented the sensor integration pipeline, and programmed the localization and control algorithms. Specifically, I configured and calibrated the sensor array, applied MCL for position estimation, and developed motion control logic in Python to complete maze navigation tasks.
+    </ul>
+  </section>
+
+  <!-- Technical Stack -->
+  <section>
+    <h2>Technologies</h2>
+    <p><strong>Tools:</strong> Python · Auduino Mega · Monte Carlo Localization(MCL) · Ultrasonic and ToF sensors · Path Planning</p>
+    <p><strong>Platform:</strong> Auduino + Python </p>
+  </section>
+
+  <!-- Reflection -->
+  <section>
+    <h2>What I Learned</h2>
+    <p>
+    I learned how to implement a probabilistic localization algorithm (MCL) in practice, how to fuse multiple sensor readings for reliable navigation, and how to integrate mechanical design with perception and control in a full robotic system. The project also highlighted the trade-offs between algorithm robustness and runtime efficiency when deployed on limited hardware.
+    </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
+</footer>
+
+</body>
+</html>
