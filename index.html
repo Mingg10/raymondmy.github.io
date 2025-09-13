@@ -1,207 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name · Portfolio</title>
-  <meta name="description" content="Your Name – portfolio, projects, experience, and contact." />
-  <meta property="og:title" content="Your Name · Portfolio" />
-  <meta property="og:description" content="Projects, experience, and contact." />
-  <meta property="og:type" content="website" />
-  <style>
-    :root{
-      --bg:#0b0c10; --card:#111218; --text:#e8e8ea; --muted:#9aa0a6; --brand:#6aa9ff; --outline:#23242b;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--text);}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;position:sticky;top:0;background:linear-gradient( to bottom, rgba(11,12,16,.85), rgba(11,12,16,.6), rgba(11,12,16,0));backdrop-filter:saturate(120%) blur(8px);z-index:50}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .logo{width:36px;height:36px;border-radius:10px;background:conic-gradient(from 180deg at 50% 50%, #6aa9ff, #8f6aff, #6affa0);box-shadow:0 0 0 1px #1a1b20}
-    .brand h1{font-size:18px;margin:0}
-    nav a{margin:0 10px;font-weight:600;color:var(--text);opacity:.9}
-    nav a:hover{opacity:1}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--outline);background:#14151c;color:var(--text);box-shadow:0 1px 0 rgba(255,255,255,.05) inset;cursor:pointer}
-    .btn:hover{border-color:#2a2b33}
-
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:40px 0 24px}
-    .hero h2{font-size:42px;line-height:1.1;margin:0 0 12px}
-    .hero p{color:var(--muted);font-size:18px;margin:0 0 20px}
-    .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .card{background:var(--card);border:1px solid var(--outline);border-radius:16px;padding:18px}
-
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-
-    section{padding:24px 0}
-    section h3{margin:0 0 12px;font-size:22px}
-    .muted{color:var(--muted)}
-    .kvs{display:flex;gap:16px;flex-wrap:wrap}
-    .kv{padding:8px 12px;border:1px solid var(--outline);border-radius:999px;font-size:14px;color:var(--muted)}
-
-    .proj{display:flex;flex-direction:column;gap:8px}
-    .proj-title{display:flex;justify-content:space-between;gap:8px}
-    .proj-title a{font-weight:700}
-    .proj p{margin:0;color:var(--muted)}
-    .tag{padding:4px 8px;border:1px solid var(--outline);border-radius:999px;font-size:12px;color:var(--muted)}
-    .tags{display:flex;gap:6px;flex-wrap:wrap}
-
-    .experience .row{display:flex;gap:12px}
-    .experience .when{min-width:120px;color:var(--muted)}
-
-    footer{padding:30px 0 60px;color:var(--muted);text-align:center}
-
-    .divider{height:1px;background:linear-gradient(90deg,transparent,#23242b,transparent);margin:18px 0}
-
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raymond Yang · Mechatronics Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <h1>Your Name</h1>
+
+  <header class="hero-section">
+    <div class="intro-left">
+      <h1>Hello, I’m <span class="highlight">Raymond Yang</span>.</h1>
+      <p class="tagline">
+        Mechatronics & Robotics · Embedded Systems & Control · Mechnical Design · Sensors & Actuators Integration · Fast Prototyping<br/>
+      </p>
+
+    </div>
+  </header>
+
+    <section class="about-me" id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I’m a mechatronics and robotics engineer passionate about building systems that connect mechanical design, electronics, and intelligent control. My recent work includes designing multi-robot cooperation platforms with ROS2 and C++, creating competition robots with custom sensing and actuation, and developing autonomous rovers capable of localization and obstacle avoidance. Alongside my research, I’ve also gained experience in industry as a process and mechanical engineer, applying DFM, FMEA, and reliability testing to ensure designs scale beyond the lab.       </p>
+        <p>
+          I thrive in projects that demand both hands-on hardware prototyping and algorithmic problem-solving. My experiences span over trajectory planning with motion capture and AprilTags, to sensor fusion for real-time navigation. Alongside my research, I’ve explored DIY builds and hardware modifications, keeping me closely connected to practical engineering challenges.        </p>
+        <p>
+          Outside engineering, I’m often out on a lake fishing, riding bikes through new cities, or prototyping personal projects on my 3D printer. I also enjoy sharing what I build — especially when it sparks curiosity or inspires someone to start building themselves.
+        </p>
       </div>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <button class="btn" id="themeBtn" title="Toggle theme">☀︎ / ☾</button>
-      </nav>
-    </header>
+      <div class="cta-buttons">
+        <a href="resume.pdf" class="btn" target="_blank">Resume</a>
+        <a href="mailto:minggyan@seas.upenn.edu" class="btn">Email me</a>
+        <a href="http://www.linkedin.com/in/mingguang-yang-308a0a23a" class="btn">Connect with me</a>
+      </div>
+    </section>
 
-    <main>
-      <section class="hero">
-        <div>
-          <h2>Hello, I’m <span style="color:var(--brand)">Your Name</span>.</h2>
-          <p>Brief tagline: Mechanical/Robotics • Forestry policy • 3D printing maker. Based in Sault Ste. Marie & Philadelphia.</p>
-          <div class="cta">
-            <a class="btn" href="#projects">View Projects</a>
-            <!-- Replace resume.pdf with your real file or Google Drive link -->
-            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-            <a class="btn" href="mailto:you@example.com">Email me</a>
+    <!-- PROJECTS -->
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+
+        <a class="project-card" href="projects/nasa.html">
+          <img src="assets/img/nasa/thumb.jpg" alt="NASA Project Image" />
+          <div class="project-info">
+            <h3>NASA LuSTR</h3>
+            <p>Developed a multi-robot cooperative locomotion system with autonomous turret docking, integrated localization, and ROS2-based control for lunar rescue applications.</p>
           </div>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0">Quick facts</h3>
-          <div class="kvs">
-            <div class="kv">C++ · Python · ROS2</div>
-            <div class="kv">3D printing (PLA/PETG/TPU)</div>
-            <div class="kv">GIS / Policy analysis</div>
-            <div class="kv">Public speaking & outreach</div>
+        </a>
+
+        <a class="project-card" href="projects/quadcopter.html">
+          <img src="assets/img/quadcopter/thumb.png" alt="Quadraptor Image" />
+          <div class="project-info">
+            <h3>VIO-based Quadcopter</h3>
+            <p>Implemented a ROS1 flight stack combining visual–inertial odometry, SE(3) trajectory planning, and closed-loop control for autonomous quadcopter navigation in cluttered environments.</p>
           </div>
-          <div class="divider"></div>
-          <p class="muted">This site is built as a single static HTML file so you can deploy it to GitHub Pages instantly. Edit the placeholders to make it yours.</p>
-        </div>
-      </section>
+        </a>
 
-      <section id="projects">
-        <h3>Featured projects</h3>
-        <div class="grid cols-3">
-          <article class="card proj">
-            <div class="proj-title">
-              <a href="#" target="_blank" rel="noopener">RANSAC Stereo Odometry</a>
-              <span class="muted">2025</span>
-            </div>
-            <p>Robust stereo odometry pipeline with RANSAC outlier rejection; ROS2 node, C++17; visualized in RViz.</p>
-            <div class="tags">
-              <span class="tag">C++</span><span class="tag">ROS2</span><span class="tag">OpenCV</span>
-            </div>
-          </article>
-          <article class="card proj">
-            <div class="proj-title">
-              <a href="#" target="_blank" rel="noopener">Offsite Timber Policy Dashboard</a>
-              <span class="muted">2024</span>
-            </div>
-            <p>Shiny dashboard summarizing Ontario mass-timber policies and supply-chain insights for decision makers.</p>
-            <div class="tags">
-              <span class="tag">R</span><span class="tag">Shiny</span><span class="tag">Policy</span>
-            </div>
-          </article>
-          <article class="card proj">
-            <div class="proj-title">
-              <a href="#" target="_blank" rel="noopener">MochiBites 3D Print Series</a>
-              <span class="muted">2023–</span>
-            </div>
-            <p>Designed and sold multi‑color card sleeves, organizers, and functional prints; AMS workflows and costing.</p>
-            <div class="tags">
-              <span class="tag">Design</span><span class="tag">3D Printing</span><span class="tag">E‑commerce</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="experience" class="experience">
-        <h3>Experience</h3>
-        <div class="card">
-          <div class="row">
-            <div class="when">2025 — now</div>
-            <div>
-              <strong>Forestry Policy Intern</strong> · Ontario MNRF<br />
-              <span class="muted">Spatial modelling (sPVA/SLYM), road‑planning, stakeholder engagement.</span>
-            </div>
+        <a class="project-card" href="projects/arena.html">
+          <img src="assets/img/arena/thumb.jpg" alt="Arena Battle Bot Image" />
+          <div class="project-info">
+            <h3>Arena Battle Robot</h3>
+            <p>Built and programmed a C++ controlled battle robot with real-time sensor feedback and actuators integration, winning 1st place out of 25 teams.</p>
           </div>
-          <div class="divider"></div>
-          <div class="row">
-            <div class="when">2023 — 2024</div>
-            <div>
-              <strong>Researcher (Offsite Timber)</strong> · University of Toronto<br />
-              <span class="muted">Mass‑timber policy analysis; capstone on Ontario’s housing supply impacts.</span>
-            </div>
+        </a>
+
+        <a class="project-card" href="projects/franka.html">
+          <img src="assets/img/franka/thumb.png" alt="Franka Image" />
+          <div class="project-info">
+            <h3>Franka Block Stacking Competition</h3>
+            <p>Autonomous block stacking with the Franka Panda arm using ROS1-based motion planning and vision-guided manipulation.</p>
           </div>
-        </div>
-      </section>
+        </a>
 
-      <section>
-        <h3>Skills</h3>
-        <div class="grid cols-2">
-          <div class="card">
-            <strong>Engineering</strong>
-            <p class="muted">C/C++, Python, MATLAB; ROS2, OpenCV; CAD basics; controls and perception.</p>
+
+        <a class="project-card" href="projects/maze.html">
+          <img src="assets/img/maze/thumb.png" alt="Maze Image" />
+          <div class="project-info">
+            <h3>Maze Solving Robot</h3>
+            <p>Designed a self-driving maze rover with custom sensor array, and Monte Carlo Localization, completing autonomous runs with centimeter-level accuracy.</p>
           </div>
-          <div class="card">
-            <strong>Research & Policy</strong>
-            <p class="muted">Survey design, AHP, literature synthesis, public communications, data viz.</p>
+        </a>
+
+        <a class="project-card" href="projects/power.html">
+          <img src="assets/img/power/thumb.jpg" alt="Power Supply Image" />
+          <div class="project-info">
+            <h3>DIY Power Supply</h3>
+            <p>Designed and built a DIY regulated DC power supply with adjustable voltage/current outputs for electronics prototyping。</p>
           </div>
+        </a>
+
+        <a class="project-card" href="projects/keyboard.html">
+          <img src="assets/img/keyboard/thumb.jpg" alt="Modular Keyboard Image" />
+          <div class="project-info">
+            <h3>Modular Keyboard</h3>
+            <p>Built and customized a modular mechanical keyboard by manufacturing the hardware and adapting firmware for layout modifications。</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="projects/jumping.html">
+          <img src="assets/img/jumping/thumb.png" alt="Jumping Robot Image" />
+          <div class="project-info">
+            <h3>Jumping Robot</h3>
+            <p>Simulated a jumping rescue robot principle with spring-loaded leg mechanisms, achieving 2 m jump feasibility through dynamic modeling and design improvements.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-box">
+          <img src="assets/img/icons/cpp.png" alt="C++">
+          <p>C++ / Python</p>
         </div>
-      </section>
-
-      <section id="contact">
-        <h3>Contact</h3>
-        <div class="card">
-          <p>Open to collaborations and roles in <em>robotics / perception / policy analytics</em>.</p>
-          <p>Email: <a href="mailto:you@example.com">you@example.com</a> · GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">@yourusername</a> · LinkedIn: <a href="#" target="_blank" rel="noopener">Your LinkedIn</a></p>
+        <div class="skill-box">
+          <img src="assets/img/icons/ros2.png" alt="ROS2">
+          <p>ROS1 / ROS2</p>
         </div>
-      </section>
-    </main>
+        <div class="skill-box">
+          <img src="assets/img/icons/solidworks.png" alt="SolidWorks">
+          <p>SolidWorks / CATIA</p>
+        </div>
+        <div class="skill-box">
+          <img src="assets/img/icons/pcb.png" alt="PCB">
+          <p>EAGLES / KiCAD</p>
+        </div>
+        <div class="skill-box">
+          <img src="assets/img/icons/3dprint.png" alt="3D Printing">
+          <p>Fast Prototyping</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <div class="divider"></div>
-      <p>© <span id="year"></span> Your Name. Built with ♥ and GitHub Pages.</p>
-    </footer>
-  </div>
+  <footer>
+    <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
+  </footer>
 
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Simple theme toggle (light/dark)
-    const btn = document.getElementById('themeBtn');
-    let light = false;
-    btn.addEventListener('click', () => {
-      light = !light;
-      document.documentElement.style.setProperty('--bg', light ? '#ffffff' : '#0b0c10');
-      document.documentElement.style.setProperty('--card', light ? '#f6f7fb' : '#111218');
-      document.documentElement.style.setProperty('--text', light ? '#0b0c10' : '#e8e8ea');
-      document.documentElement.style.setProperty('--muted', light ? '#5f6368' : '#9aa0a6');
-      document.documentElement.style.setProperty('--outline', light ? '#e6e8ef' : '#23242b');
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
