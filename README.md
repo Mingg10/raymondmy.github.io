@@ -1,4 +1,4 @@
-# Mechatronics & Robotics Portfolio
+# Portfolio
 
 This is my personal portfolio website showcasing selected projects in mechatronics, robotics, and hardware prototyping.  
 
