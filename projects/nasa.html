@@ -1,75 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NASA LuSTR · Raymond Yang</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TRUSSES – Mechanical Project Detail</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
+  <!-- Nav (same as home) -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html#home">Raymond Yang</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#qualification">Qualification</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn ghost" href="../resume.pdf" target="_blank">Resume</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/mingguang-yang-308a0a23a" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
 
-<header>
-  <a href="../index.html" class="back-link">&larr; Back to Home</a>
-  <h1>NASA LuSTR</h1>
-  <p class="subtitle">Multi-Robot Cooperation Platform</p>
-</header>
+  <main>
+    <!-- Sub-hero -->
+    <section class="section subhero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html#projects">← Back to Projects</a>
+        <h1>Lunar Rover & Docking System — Structural Design</h1>
+        <p class="muted"> Jan 2025 – Now · University of Pennsylvania </p>
 
-<main class="project-page">
-  <!-- Main Hero Image -->
-  <img src="../assets/img/nasa/thumb.jpg" alt="NASA Project Hero" class="project-img">
+        <div class="pill-row">
+          <span class="pill">SolidWorks</span>
+          <span class="pill">ANSYS</span>
+          <span class="pill">GD&amp;T</span>
+          <span class="pill">Tolerance Stack-up</span>
+          <span class="pill">FEA / Modal</span>
+          <span class="pill">6061-T6 / PA12</span>
+          <span class="pill">CNC machining</span>
+          <span class="pill">3D printing</span>
+          <span class="pill">DFM / Assembly</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- Overview -->
-  <section>
-    <h2>Project Overview</h2>
-    <p>
-      This project explores autonomous multi-robot cooperation for mobile truss construction and deployment. Our primary objective is to develop a system where modular robotic platforms can dock with each other and maintain structural and kinematic coordination while moving as a unified unit.
+    <!-- Media gallery -->
+    <section class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img class="media" src="../assets/img/nasa/DM_CAD.png" alt="Docking mechanism CAD" />
+          <img class="media" src="../assets/img/nasa/SZT_CAD.png" alt="Spiral-Zipper turret CAD" />
+          <img class="media" src="../assets/img/nasa/rover.jpg" alt="Rover CAD" />
+        </div>
+      </div>ß
+    </section>
 
-      Each rover is equipped with an onboard manipulator and turret-based docking system, allowing it to autonomously connect to other agents and payload modules. Once docked, the system can execute synchronized motion, enabling complex operations like relocating large truss structures or assembling components in harsh environments—such as extraterrestrial or remote terrestrial construction sites.
+    <!-- Overview / Highlights -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>Overview</h2>
+          <ul class="bullets">
+            <li><b>Chassis design:</b> Lightweight box-frame in <b>6061-T6</b> with local ribs. Payload target <b>60 kg</b>.</li>
+            <li><b>Turret mechanism:</b> Spiral-Zipper yaw/pitch unit with <b>latched docking</b> and customized 3D printed torsion spring.</li>
+            <li><b>Interfaces:</b> Standardized mounting flanges; key fits held to <b>±0.2 mm</b> for turret–base alignment.</li>
+            <li><b>Materials &amp; process:</b> CNC-machined aluminum plates + printed <b>PA12 / ABS</b> fixtures.</li>
+            <li><b>Documentation:</b> Exploded views, BOM, and assembly notes for quick swap and maintenance.</li>
+          </ul>
+        </div>
 
-      The project leverages ROS 2, real-time multi-agent communication, and modular hardware/software architecture. Outdoor field tests demonstrate the feasibility of dynamic, locomotion-coupled cooperative behaviors, pushing the frontier of autonomous robotic construction.    
-    </p>
-  </section>
+        <div class="card">
+          <h2>Validation</h2>
+          <ul class="bullets">
+            <li><b>FEA (linear):</b> Static checks under <b>3 g</b> ground impact. Max stress &lt; yield; SF ≥ <b>1.8</b>.</li>
+            <li><b>Modal:</b> First mode &gt; <b>35 Hz</b> to avoid operational vibration coupling.</li>
+            <li><b>Tolerance stack-up:</b> Docking latch repeatability within <b>±0.2 mm</b> at critical datums.</li>
+            <li><b>Field tests:</b> Multiple terrain trials; turret lock remains secure after repeated docking cycles.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- Additional Images -->
-  <div class="project-gallery">
-    <img src="../assets/img/nasa/trusses.gif" alt="Field test with truss" class="project-gif"/>
-    <img src="../assets/img/nasa/docking.jpg" alt="Docking system close-up" />
-    <img src="../assets/img/nasa/DM_CAD.png" alt="Docking mechanism CAD" />
-    <img src="../assets/img/nasa/SZT_CAD.png" alt="Spiral Zipper CAD" />
-    <img src="../assets/img/nasa/rover.gif" alt="Wheel-based rover" class="project-gif" />
-    <img src="../assets/img/nasa/spirit.jpg" alt="Sensor + wiring inside turret" />
-  </div>
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>Manufacturing Notes</h2>
+          <ul class="bullets">
+            <li>Mixed process: water-jet blanks → CNC finish → deburr → anodize (select parts).</li>
+            <li>Printed PA12 /ABS jigs for wire-routing and sensor guards; quick to replace.</li>
+            <li>Fastener strategy: M6/M8 class 8.8; turret flange torque <b>15 N·m</b>.</li>
+          </ul>
+        </div>
 
-  <!-- Key Contributions -->
-  <section>
-    <h2>My Contributions</h2>
-    <ul>
-      <li>Actuation System Integration: Implemented and configured wheel-side actuators (motors), integrating them into the hardware architecture for mobility and docking.</li>
-      <li>Sensor Feedback Loop: Collaborated on feedback control using wheel encoders and GPS, enabling closed-loop navigation via ROS 2 control stack.</li>
-      <li>Docking System: Contributed to both the mechanical design and control logic for the docking module, ensuring smooth engagement and dynamic alignment with the docking station</li>
-      <li>Turret System: Designed and assembled the electronics mounting system for the turret, and developed control routines using ROS 2 nodes for positioning and operation.</li>
-    </ul>
-  </section>
+        <div class="card">
+          <h2>My Role</h2>
+          <ul class="bullets">
+            <li>Led chassis layout, turret mechanism, and mounting interfaces.</li>
+            <li>Built exploded assemblies, BOM, and shop drawings with GD&amp;T.</li>
+            <li>Ran FEA/modal pre-checks and coordinated fabrication and fit-up.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Technical Stack -->
-  <section>
-    <h2>Technologies</h2>
-    <p><strong>Tools:</strong> ROS2 · C++ · Python · SolidWorks · 3D Printing · Sensors (IMU, GPS, Encoders)</p>
-    <p><strong>Platform:</strong> Ubuntu 22.04 + ROS2 Node + Raspberry Pi4</p>
-  </section>
-
-  <!-- Reflection -->
-  <section>
-    <h2>What I Learned</h2>
-    <p>
-      This project taught me how to go beyond simulations and bring complex systems into the real world — where battery limits, uneven terrain, dust, and hardware failure are part of the challenge. I learned how to design for robustness, debug fast under pressure, and collaborate across both hardware and software teams.
-    </p>
-  </section>
-</main>
-
-<footer>
-  <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
-</footer>
-
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-lg">Raymond Yang</div>
+        <div class="muted">Mechanical / Manufacturing Engineer</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,64 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arena Battle Robot · Raymond Yang</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arena Battle Robot — Mechanical & Mechatronic Design</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
+  <!-- Nav (same as home) -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html#home">Raymond Yang</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#qualification">Qualification</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn ghost" href="../resume.pdf" target="_blank">Resume</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/mingguang-yang-308a0a23a" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
 
-<header>
-  <a href="../index.html" class="back-link">&larr; Back to Home</a>
-  <h1>Arena Battle Robot</h1>
-  <p class="subtitle">C++ Programmed ESP32 Battle Robot</p>
-</header>
+  <main>
+    <!-- Sub-hero -->
+    <section class="section subhero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html#projects">← Back to Projects</a>
+        <h1>Arena Battle Robot — Mechanical & Mechatronic Design</h1>
+        <p class="muted">2023 · Team Project · Mechatronics Competition</p>
 
-<main class="project-page">
-  <!-- Main Hero Image -->
-  <img src="../assets/img/arena/thumb.jpg" alt="Arena Battle" class="project-img">
+        <div class="pill-row">
+          <span class="pill">SolidWorks</span>
+          <span class="pill">Chassis & Armor</span>
+          <span class="pill">GD&amp;T</span>
+          <span class="pill">ESP32 · C++</span>
+          <span class="pill">Sensors &amp; Actuators</span>
+          <span class="pill">Perf-board Soldering</span>
+          <span class="pill">Wiring Layout</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- Overview -->
-  <section>
-    <h2>Project Overview</h2>
-    <p>
-      This project focused on developing a battle robot capable of both autonomous attacks and stable teleoperation. I implemented C++ control algorithms with real-time sensor feedback, integrated Vive sensors and wireless communication via an ESP32 microcontroller, and optimized the robot’s mobility and durability through iterative testing. The system performed consistently in multiple matches and secured first place in a university competition with 25 participating teams.
-    </p>
-  </section>
+    <!-- Media gallery -->
+    <section class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img class="media" src="../assets/img/arena/thumb.jpg" alt="Robot chassis CAD in SolidWorks" />
+          <img class="media" src="../assets/img/arena/Perf.jpg" alt="Sensor/actuator integration and wiring" />
+          <img class="media" src="../assets/img/arena/competition.gif" alt="Custom perf-board and ESP32 control" />
+        </div>
+      </div>
+    </section>
 
-  <!-- Additional Images -->
-  <div class="project-gallery">
-    <img src="../assets/img/arena/competition.gif" alt="Competition" class="project-gif"/>
-    <img src="../assets/img/arena/Battlefield.png" alt="Battle Arena" />
-    <img src="../assets/img/arena/Perf.jpg" alt="Perf Board" />
-  </div>
+    <!-- Overview / Highlights -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>Overview</h2>
+          <ul class="bullets">
+            <li>Built a <b>battle-ready arena robot</b> emphasizing mechanical robustness and serviceability.</li>
+            <li>Designed <b>chassis and armor plates</b> in SolidWorks; packaging for quick repairs.</li>
+            <li>Integrated sensors, actuators, and electronics within a protected frame and cable channels.</li>
+            <li>ESP32 (C++) control for drive and weapon modules; modular connectors for fast swap.</li>
+          </ul>
+        </div>
 
-  <!-- Key Contributions -->
-  <section>
-    <h2>My Contributions</h2>
-    <ul>
-      I led in building the electrical system from scratch, including motor controller power distribution and perf-board prototyping, ensuring stable operation under heavy loads. In addition, I envolved in programming the C++ control algorithms with real-time sensor feedback, integrating vive optical localize sensors and wireless communication, and iteratively tuning the robot’s mobility and durability during competition testing.
-    </ul>
-  </section>
+        <div class="card">
+          <h2>Mechanical Design</h2>
+          <ul class="bullets">
+            <li>Modeled <b>drive mounts, gear supports, battery bay, and top armor</b> with GD&amp;T on critical fits.</li>
+            <li>Balanced <b>center of mass</b> for traction and turning; kept wiring clearances and strain relief.</li>
+            <li>Mixed fabrication: <b>laser cutting MDF plates</b> + <b>3D-printed brackets</b> for sensor guards.</li>
+            <li>Exploded assemblies, BOM, and shop drawings prepared for rapid machining and assembly.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- Technical Stack -->
-  <section>
-    <h2>Technologies</h2>
-    <p><strong>Tools:</strong> C++ · ESP32 MCU · Vive sensors · Fast Prototyping · Wireless communication · Real-time control</p>
-    <p><strong>Platform:</strong> ESP32-S3 + C++ </p>
-  </section>
+    <!-- Integration / Results -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>Electronics Integration</h2>
+          <ul class="bullets">
+            <li>Integrated <b>TOF / limit sensors</b> for proximity and boundary detection.</li>
+            <li>Controlled dual DC drive and weapon servo via <b>ESP32 (C++)</b> with PWM and GPIO interrupts.</li>
+            <li>Designed and hand-soldered a <b>perf-board control module</b> with labeled harnesses and fusing.</li>
+            <li>Planned <b>wiring layout</b> to separate power/signal paths and simplify field maintenance.</li>
+          </ul>
+        </div>
 
-  <!-- Reflection -->
-  <section>
-    <h2>What I Learned</h2>
-    <p>
-    I learned how to design and prototype electrical systems that integrate seamlessly with embedded control, how to combine sensing and actuation for reliable performance, and how to rapidly test and iterate to achieve competition-level robustness.    </p>
-  </section>
-</main>
+        <div class="card">
+          <h2>Testing & Results</h2>
+          <ul class="bullets">
+            <li>Bench-tested drivetrain under load; revised gear ratio for improved acceleration.</li>
+            <li>Validated sensor reliability after impacts; connections held via strain-relieved harness.</li>
+            <li>Achieved 1st place out of 30+ participated teams.</li>
+            <li>Demonstrated full mechanical–electrical integration with quick swap/repair workflow.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
-</footer>
-
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-lg">Raymond Yang</div>
+        <div class="muted">Mechanical / Mechatronics Engineer</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

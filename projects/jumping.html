@@ -1,63 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jumping Robot · Raymond Yang</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jumping Robot — Spring Mechanism & MATLAB Kinematics</title>
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
+  <!-- Nav -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html#home">Raymond Yang</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#qualification">Qualification</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn ghost" href="../resume.pdf" target="_blank">Resume</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/mingguang-yang-308a0a23a" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
 
-<header>
-  <a href="../index.html" class="back-link">&larr; Back to Home</a>
-  <h1>Jumping Robot</h1>
-  <p class="subtitle">Spring-loaded Jumping Rescue Robot</p>
-</header>
+  <main>
+    <!-- Sub-hero -->
+    <section class="section subhero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html#projects">← Back to Projects</a>
+        <h1>Jumping Robot — Spring Mechanism & MATLAB Kinematics</h1>
+        <p class="muted"> 2021 · Personal / Coursework </p>
 
-<main class="project-page">
-  <!-- Main Hero Image -->
-  <img src="../assets/img/jumping/thumb.png" alt="Jumping Robot" class="project-img">
+        <div class="pill-row">
+          <span class="pill">SolidWorks</span>
+          <span class="pill">Mechanical Design</span>
+          <span class="pill">Springs & Dampers</span>
+          <span class="pill">Kinematics</span>
+          <span class="pill">MATLAB</span>
+          <span class="pill">Trajectory Analysis</span>
+        </div>
+      </div>
+    </section>
 
-  <!-- Overview -->
-  <section>
-    <h2>Project Overview</h2>
-    <p>
-        This project explored the feasibility of a jumping rescue robot capable of traversing vertical obstacles in disaster environments. Drawing on prior research in spring-assisted legged locomotion, we designed and refined a modular leg mechanism for high-energy jumps. Using kinematic analysis, force modeling, and simulation tools, the system was evaluated for jump height, landing stability, and potential applications in rubble traversal. The design demonstrated the theoretical capability of achieving 2 m vertical jumps, providing a foundation for future prototyping and testing
-    </p>
-  </section>
+    <!-- Gallery -->
+    <section class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <!-- Replace the src paths with your actual asset locations -->
+          <img class="media" src="../assets/img/jumping/Mechanical.png" alt="Jumping robot spring mechanism CAD" />
+          <img class="media" src="../assets/img/jumping/thumb.png" alt="Hand-drawn linkage and gearing concept" />
+          <img class="media" src="../assets/img/jumping/matlab.png" alt="MATLAB trajectory analysis" />
+        </div>
+      </div>
+    </section>
 
-  <!-- Additional Images -->
-  <div class="project-gallery">
-    <img src="../assets/img/jumping/Mechanical.png" alt="Competition"/>
-    <img src="../assets/img/jumping/Matlab.png" alt="Battle Arena" />
-    <img src="../assets/img/jumping/thumb.png" alt="Perf Board" />
-  </div>
+    <!-- Overview / Mechanical -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>Overview</h2>
+          <ul class="bullets">
+            <li>Concept robot that stores energy in a <b>spring pack</b> and releases it for a vertical jump.</li>
+            <li>Focus on <b>simple, serviceable mechanics</b>: modular legs, central spring, and a compact frame.</li>
+            <li>Goal: fast setup, repeatable launches, and safe landing with passive damping.</li>
+          </ul>
+        </div>
 
-  <!-- Key Contributions -->
-  <section>
-    <h2>My Contributions</h2>
-    <ul>
-        I focused on adapting and improving existing jumping leg designs, optimizing the spring–linkage configuration for energy efficiency, and conducting MATLAB-based simulations to predict system performance. I also analyzed landing dynamics and stability trade-offs, proposing control strategies for future implementation.
-    </ul>
-  </section>
+        <div class="card">
+          <h2>Mechanical Design</h2>
+          <ul class="bullets">
+            <li>Rough CAD of <b>frame and leg set</b>; central torsion/compression spring with adjustable preload.</li>
+            <li>Basic latch and hook interface for <b>energy charge → release</b> sequence.</li>
+            <li>Material concept: <b>6061-T6 bars</b> and printed <b>PA12 guides</b> for light weight.</li>
+            <li>Exploded views and simple drawings used to estimate mass and clearances.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <!-- Technical Stack -->
-  <section>
-    <h2>Technologies</h2>
-    <p><strong>Tools:</strong> Solidworks · MATLAB/Simulink · Kinematic modeling · Dynamic Simulation</p>
-  </section>
+    <!-- MATLAB / Results -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>MATLAB Kinematics</h2>
+          <ul class="bullets">
+            <li>Hand-derived <b>linkage equations</b> to track leg angle and tip path over time.</li>
+            <li>Computed <b>trajectory envelopes</b> for loading vs. release phases.</li>
+            <li>Energy model: spring → kinetic → potential; losses lumped as damping.</li>
+            <li>Used results to size spring rate and set a target <b>2 m</b> jump (ideal, no wind).</li>
+          </ul>
+        </div>
 
-  <!-- Reflection -->
-  <section>
-    <h2>What I Learned</h2>
-    <p>
-        This project helped me gain experience in evaluating prior robotics research, adapting designs for new use cases, and applying theoretical analysis to predict real-world performance. I learned to balance energy efficiency, stability, and mechanical feasibility in designing legged locomotion systems intended for rescue scenarios.
-  </section>
-</main>
+        <div class="card">
+          <h2>Results & Next Steps</h2>
+          <ul class="bullets">
+            <li>CAD proves basic packaging; MATLAB shows feasible takeoff velocity.</li>
+            <li>Next: add <b>bumper pads</b> and a simple <b>dashpot</b> for landing control.</li>
+            <li>Plan a bench test for <b>spring rate & preload</b> vs. travel; validate trajectory with high-fps video.</li>
+            <li>Optional: integrate a <b>servo latch</b> and encoder for controlled release timing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
-</footer>
-
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-lg">Raymond Yang</div>
+        <div class="muted">Mechanical / Mechatronics Engineer</div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

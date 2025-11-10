@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Strain Mapping — FEA · Photoelasticity · Strain Gauges</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <!-- Nav (same as home) -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html#home">Raymond Yang</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#qualification">Qualification</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn ghost" href="../resume.pdf" target="_blank">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sub-hero -->
+    <section class="section subhero">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html#projects">← Back to Projects</a>
+        <h1>Strain Mapping — FEA · Photoelasticity · Strain Gauges</h1>
+        <p class="muted">2021 · Experimental Stress Analysis · Lab Project</p>
+
+        <div class="pill-row">
+          <span class="pill">Specimen Prep</span>
+          <span class="pill">Gauge Bonding</span>
+          <span class="pill">Photoelasticity</span>
+          <span class="pill">ANSYS FEA</span>
+          <span class="pill">Correlation</span>
+          <span class="pill">Report & Drawings</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <!-- Replace with your images -->
+          <img class="media" src="../assets/img/strain/FEA.PNG" alt="Curved stringer specimen & gauge map" />
+          <img class="media" src="../assets/img/strain/photo.png" alt="Photoelastic fringe pattern under load" />
+          <img class="media" src="../assets/img/strain/setup.png" alt="ANSYS stress field and gauge locations" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview / Methods -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>Overview</h2>
+          <ul class="bullets">
+            <li>Compared an aircraft-style <b>stringer</b> specimen using <b>FEA, photoelasticity, and bonded strain gauges</b>.</li>
+            <li>Objective: correlate stress/strain fields across methods and explain deviations via mechanics-based reasoning.</li>
+            <li>Deliverables: specimen drawing, gauge layout, photoelastic fringe interpretation, FEA model, and correlation report.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Experimental Methods</h2>
+          <ul class="bullets">
+            <li><b>Specimen prep:</b> deburr, surface clean/neutralize; mark neutral axis and gauge centerlines.</li>
+            <li><b>Strain gauges:</b> uniaxial on inner/outer surfaces + one <b>45° rosette</b> at mid-span; quarter/half-bridge wiring, shunt-cal, zero drift check.</li>
+            <li><b>Photoelasticity:</b> incremental tensile loading; captured <b>isochromatic fringe orders</b> and converted to principal stress via material stress–optic coefficient.</li>
+            <li><b>Test protocol:</b> load steps with dwell to stabilize readings; documented load–strain curves and fringe maps.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEA / Correlation -->
+    <section class="section">
+      <div class="container two-col">
+        <div class="card">
+          <h2>FEA Modeling</h2>
+          <ul class="bullets">
+            <li>Built 3D <b>ANSYS</b> model; applied measured material properties from tensile coupons; mesh convergence study.</li>
+            <li>Boundary conditions replicated grip constraints; load stepped to match lab protocol.</li>
+            <li>Extracted stress at <b>gauge center nodes</b>; exported field data for direct comparison.</li>
+            <li>Evaluated <b>von Mises</b> and <b>principal stresses</b> along inner/outer radii and web region.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Correlation & Results</h2>
+          <ul class="bullets">
+            <li>Peak stress on the <b>concave (inner radius)</b> side; photoelastic fringes and FEA maxima co-located at fillet region.</li>
+            <li>Rosette-derived principal stresses matched FEA best at mid-span; uniaxial gauges diverged more in low-gradient regions.</li>
+            <li><b>Error sources:</b> gauge alignment ±0.5 mm, adhesive creep, transverse sensitivity, fringe order interpretation.</li>
+            <li>Produced <b>FE–test comparison plots</b> and a short memo highlighting fillet radius/thickness as redesign levers.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer note -->
+    <section class="section">
+      <div class="container">
+        <div class="muted small">
+          Representative images for illustration; raw data and detailed calculations available on request.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-lg">Raymond Yang</div>
+        <div class="muted">Mechanical / Mechatronics Engineer</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

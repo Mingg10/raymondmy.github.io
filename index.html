@@ -1,162 +1,322 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raymond Yang · Mechatronics Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raymond Yang – Mechanical / Mechatronics / Manufacturing</title>
+  <meta name="description" content="Mechanical & mechatronics & manufacturing engineer portfolio focused on design-for-manufacture, GD&T, tolerance analysis, and FEA." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <header class="hero-section">
-    <div class="intro-left">
-      <h1>Hello, I’m <span class="highlight">Raymond Yang</span>.</h1>
-      <p class="tagline">
-        Mechatronics & Robotics · Mechnical Design · Embedded Systems & Control · Sensors & Actuators Integration · Fast Prototyping<br/>
-      </p>
-
-    </div>
+  <!-- ===== NAVBAR ===== -->
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a class="brand" href="#home">Raymond Yang</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#qualification">Qualification</a></li>
+        <li><a href="#projects">Designs</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn ghost" href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/mingguang-yang-308a0a23a" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </nav>
   </header>
 
-    <section class="about-me" id="about">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <p>
-          I’m a mechatronics and robotics engineer passionate about building systems that connect mechanical design, electronics, and intelligent control. My recent work includes designing multi-robot cooperation platforms with ROS2 and C++, creating competition robots with custom sensing and actuation, and developing autonomous rovers capable of localization and obstacle avoidance. Alongside my research, I’ve also gained experience in industry as a process and mechanical engineer, applying DFM, FMEA, and reliability testing to ensure designs scale beyond the lab.       </p>
-        <p>
-          I thrive in projects that demand both hands-on hardware prototyping and algorithmic problem-solving. My experiences span over trajectory planning with motion capture and AprilTags, to sensor fusion for real-time navigation. Alongside my research, I’ve explored DIY builds and hardware modifications, keeping me closely connected to practical engineering challenges.        </p>
-        <p>
-          Outside engineering, I’m often out on a lake fishing, riding bikes through new cities, or prototyping personal projects on my 3D printer. I also enjoy sharing what I build — especially when it sparks curiosity or inspires someone to start building themselves.
-        </p>
-      </div>
-      <div class="cta-buttons">
-        <a href="resume.pdf" class="btn" target="_blank">Resume</a>
-        <a href="mailto:minggyan@seas.upenn.edu" class="btn">Email me</a>
-        <a href="http://www.linkedin.com/in/mingguang-yang-308a0a23a" class="btn">Connect with me</a>
-      </div>
-    </section>
+  <main>
 
-    <!-- PROJECTS -->
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-
-        <a class="project-card" href="projects/nasa.html">
-          <img src="assets/img/nasa/thumb.jpg" alt="NASA Project Image" />
-          <div class="project-info">
-            <h3>NASA LuSTR</h3>
-            <p>Developed a multi-robot cooperative locomotion system with autonomous turret docking, integrated localization, and ROS2-based control for lunar rescue applications.</p>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="section hero">
+      <div class="container grid-2 qualification-grid">
+        <div>
+          <p class="eyebrow">Hi, I’m</p>
+          <h1>Raymond Yang</h1>
+          <p class="tagline">Mechanical / Mechatronics / Manufacturing Engineer</p>
+          <p class="intro-text">
+            I design and validate <b>production-ready mechanical and mechatronic systems</b> 
+            with a focus on <b>GD&amp;T</b>, <b>tolerance stack-up</b>, <b>DFM/DFMEA</b>, and <b>FEA</b>. 
+            My background across <b>OEM component design</b>, <b>process engineering</b>, and 
+            <b>embedded mechatronics integration</b> helps me bridge <b>design</b> to 
+            <b>manufacturing</b>—from CAD modeling and materials selection to actuation, 
+            testing, and documentation aligned with industry standards.
+          </p>
+          <div class="actions">
+            <a class="btn" href="mailto:minggyan@seas.upenn.edu">Email</a>
+            <a class="btn ghost" href="resume.pdf" target="_blank">View Resume</a>
           </div>
-        </a>
-
-        <a class="project-card" href="projects/quadcopter.html">
-          <img src="assets/img/quadcopter/thumb.png" alt="Quadraptor Image" />
-          <div class="project-info">
-            <h3>VIO-based Quadcopter</h3>
-            <p>Implemented a ROS1 flight stack combining visual–inertial odometry, SE(3) trajectory planning, and closed-loop control for autonomous quadcopter navigation in cluttered environments.</p>
+          <div class="stats">
+            <div class="stat"><div class="value">02</div><div class="label">Years</div></div>
+            <div class="stat"><div class="value">10+</div><div class="label">Projects</div></div>
+            <div class="stat"><div class="value">03</div><div class="label">Companies</div></div>
           </div>
-        </a>
-
-        <a class="project-card" href="projects/arena.html">
-          <img src="assets/img/arena/thumb.jpg" alt="Arena Battle Bot Image" />
-          <div class="project-info">
-            <h3>Arena Battle Robot</h3>
-            <p>Built and programmed a C++ controlled battle robot with real-time sensor feedback and actuators integration, winning 1st place out of 25 teams.</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="projects/franka.html">
-          <img src="assets/img/franka/thumb.png" alt="Franka Image" />
-          <div class="project-info">
-            <h3>Franka Block Stacking Competition</h3>
-            <p>Autonomous block stacking with the Franka Panda arm using ROS1-based motion planning and vision-guided manipulation.</p>
-          </div>
-        </a>
-
-
-        <a class="project-card" href="projects/maze.html">
-          <img src="assets/img/maze/thumb.png" alt="Maze Image" />
-          <div class="project-info">
-            <h3>Maze Solving Robot</h3>
-            <p>Designed a self-driving maze rover with custom sensor array, and Monte Carlo Localization, completing autonomous runs with centimeter-level accuracy.</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="projects/OPT.html">
-          <img src="assets/img/OPT/thumb.png" alt="OPT Image" />
-          <div class="project-info">
-            <h3>Optical Pressure Transducer</h3>
-            <p>Modeled and improved an optical pressure transducer in COMSOL, enhancing stability and accuracy under thermal and fluid effects.</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="projects/power.html">
-          <img src="assets/img/power/thumb.jpg" alt="Power Supply Image" />
-          <div class="project-info">
-            <h3>DIY Power Supply</h3>
-            <p>Designed and built a DIY regulated DC power supply with adjustable voltage/current outputs for electronics prototyping。</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="projects/keyboard.html">
-          <img src="assets/img/keyboard/thumb.jpg" alt="Modular Keyboard Image" />
-          <div class="project-info">
-            <h3>Modular Keyboard</h3>
-            <p>Built and customized a modular mechanical keyboard by manufacturing the hardware and adapting firmware for layout modifications。</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="projects/EMI.html">
-          <img src="assets/img/EMI/thumb.png" alt="EMI Material Image" />
-          <div class="project-info">
-            <h3>EMI Absorptive Shielding Material</h3>
-            <p>Designed and validated CNT-based composite materials achieving optimal EMI absorption through fabrication and simulation.</p>
-          </div>
-        </a>
-
-        <a class="project-card" href="projects/jumping.html">
-          <img src="assets/img/jumping/thumb.png" alt="Jumping Robot Image" />
-          <div class="project-info">
-            <h3>Jumping Robot</h3>
-            <p>Simulated a jumping rescue robot principle with spring-loaded leg mechanisms, achieving 2 m jump feasibility through dynamic modeling and design improvements.</p>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="skill-grid">
-        <div class="skill-box">
-          <img src="assets/img/icons/cpp.png" alt="C++">
-          <p>C++ / Python</p>
-        </div>
-        <div class="skill-box">
-          <img src="assets/img/icons/ros2.png" alt="ROS2">
-          <p>ROS1 / ROS2</p>
-        </div>
-        <div class="skill-box">
-          <img src="assets/img/icons/solidworks.png" alt="SolidWorks">
-          <p>SolidWorks / CATIA</p>
-        </div>
-        <div class="skill-box">
-          <img src="assets/img/icons/pcb.png" alt="PCB">
-          <p>EAGLES / KiCAD</p>
-        </div>
-        <div class="skill-box">
-          <img src="assets/img/icons/3dprint.png" alt="3D Printing">
-          <p>Fast Prototyping</p>
         </div>
       </div>
     </section>
+
+    <!-- ===== QUALIFICATION ===== -->
+    <section id="qualification" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2 class="with-icon">Education</h2>
+          <ul class="timeline">
+            <li class="card">
+              <div class="row">
+                <b>MSE in Mechanical Engineering</b><span class="muted">2024–2026</span>
+              </div>
+              <div class="muted">University of Pennsylvania · Philadelphia, USA</div>
+              <ul class="bullets">
+                <li><strong>Focus Areas:</strong> Mechanical Design, Mechatronic Integration, DFM, FEA</li>
+                <li><strong>Research Project:</strong> Structural design & turret integration for multi-robot rover (NASA TRUSSES)</li>
+              </ul>
+            </li>
+            <li class="card">
+              <div class="row">
+                <b>BASc in Mechanical Engineering</b><span class="muted">2019–2024</span>
+              </div>
+              <div class="muted">University of Toronto · Toronto, Canada</div>
+              <ul class="bullets">
+                <li><strong>Focus Areas:</strong> CAD/CAM, GD&amp;T, Manufacturing Processes, Materials, Mechatronic Integration</li>
+                <li><strong>Capstone:</strong> Optical pressure transducer — structural reliability under high-T/high-P</li>
+                <li>Dean's Honor List (All semesters)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="with-icon">Work</h2>
+          <ul class="timeline">
+            <li class="card">
+              <div class="row">
+                <b>Process Engineer — Bittele Electronics</b>
+                <span class="muted">2022–2023</span>
+              </div>
+              <div class="muted">Toronto, Canada</div>
+              <ul class="bullets">
+                <li>Led <b>DFM</b> and <b>FMEA</b> reviews for 300+ PCB–mechanical builds, improving yield from <b>3σ to 6σ</b>.</li>
+                <li>Designed <b>fixtures</b> and process tools to enhance alignment and reduce setup time by 15%.</li>
+                <li>Managed <b>BOMs</b> and coordinated with suppliers and production teams for manufacturability and quality.</li>
+              </ul>
+            </li>
+            <li class="card">
+              <div class="row">
+                <b>Mechanical Engineer — Jiangnan Mould & Plastics</b><span class="muted">2021</span>
+              </div>
+              <div class="muted">Shanghai, China</div>
+              <ul class="bullets">
+                <li><b>Exterior system design</b> for <b>Tier-1 OEM</b> programs using <b>CATIA V5</b>.</li>
+                <li><b>GD&amp;T</b> and <b>tolerance analysis</b>; <b>Abaqus</b> load/impact checks; <b>PPAP</b> documentation support.</li>
+                <li>Worked with <b>CAE</b> and <b>tooling engineers</b> to reduce injection-molding defects by <b>~2%</b>.</li>
+              </ul>
+            </li>
+            <li class="card">
+              <div class="row">
+                <b>Independent Initiative — MindFab Micro-Factory</b><span class="muted">2022–Now</span>
+              </div>
+              <div class="muted">Remote / Toronto, Canada</div>
+              <ul class="bullets">
+                <li>Built a <b>warehouse management system</b> based on <b>GreaterWMS</b> to track orders and materials.</li>
+                <li>Handled <b>printer maintenance</b> and <b>file optimization</b> for consistent multi-material output.</li>
+                <li>Managed <b>small-batch prototyping</b> with <b>BOM</b> control and <b>quality checkpoints</b>.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="grid-2 cards">
+          <!-- Mechanical focus projects -->
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2025</div>
+                <h3>Lunar Rover & Docking System — Structural Design</h3>
+              </div>
+            </div>
+            <p>Developed the aluminum chassis and turret mechanism of a lunar rover prototype. Focused on load-bearing structure, assembly fit, and turret locking design. Verified stability and durability under multi-robot docking tests.</p>
+            <img class="thumb" src="assets/img/nasa/DM_CAD.png" alt="docking" />
+            <p><a class="link" href="projects/NASA.html" target="_blank">View project ↗</a></p>
+          </article>
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2024</div>
+                <h3>Arena Battle Robot — Mechanical & Mechatronic Design</h3>
+              </div>
+            </div>
+            <p>Designed the robot chassis and armor structure in SolidWorks, integrating sensors, actuators, and control boards on ESP32 (C++) with custom wiring and perf-board soldering.</p>
+            <img class="thumb" src="assets/img/arena/thumb.jpg" alt="Arena Battle Robot" />
+            <p><a class="link" href="projects/arena.html" target="_blank">View project ↗</a></p>
+          </article>
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2023</div>
+                <h3>Automated Adhesive Workstation — Process & Mechanical Design</h3>
+              </div>
+            </div>
+            <p> Developed an automated adhesive workstation integrating dispensing, pressing, and alignment functions; focused on design and DFM for stable coating quality and reduced manual labor.</p>
+            <img class="thumb" src="assets/img/adh/CAD.png" alt="Automated dispensing station concept" />
+            <p><a class="link" href="projects/adh.html" target="_blank">View project ↗</a></p>
+          </article>
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2023–2024</div>
+                <h3>Optical Pressure Transducer — High-T/High-P Structural Reliability</h3>
+              </div>
+            </div>
+            <p>COMSOL multi-physics analyses (thermal + structural) for 350 °C / 10,000 PSI conditions. Improved fatigue life by ~20% via fillet transitions and membrane support; documented test procedure and calibration results (±2% accuracy).</p>
+            <img class="thumb" src="assets/img/OPT/thumb.png" alt="Optical pressure transducer" />
+            <p><a class="link" href="projects/opt.html" target="_blank">View project ↗</a></p>
+          </article>
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">Concept</div>
+                <h3>Intelligent Lathe Tool Grinder — Mechanical Structure Design</h3>
+              </div>
+            </div>
+            <p>Concept study for an automated grinder: three-axis tool orientation, XY feed with Z lift, and safety brake. Focus on mechanism layout, stiffness, and serviceability.</p>
+            <img class="thumb" src="assets/img/grinder/assembly.png" alt="Concept lathe tool grinder" />
+            <p><a class="link" href="projects/grinder.html" target="_blank">View project ↗</a></p>
+          </article>
+
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2022–Now</div>
+                <h3>Micro-Factory: Small-Batch Prototyping — Inventory & QC</h3>
+              </div>
+            </div>
+            <p>Built an on-demand pipeline: digital catalog, print parameter, material decision matrix (PLA/ABS/PETG/PA), and DFM. Reduced turnaround time by ~30% while maintaining dimensional repeatability.</p>
+            <img class="thumb" src="assets/img/3dp/thumb.jpg" alt="Small batch prototyping" />
+          </article>
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2021</div>
+                <h3>Strain Mapping — FEA · Photoelasticity · Gauges</h3>
+              </div>
+            </div>
+            <p>Analyzed an aircraft stringer with ANSYS FEA, photoelastic fringe patterns, and bonded strain gauges; correlated stress fields and quantified method-to-method error.</p>
+            <img class="thumb" src="assets/img/strain/setup.png" alt="Stringer strain mapping" />
+            <p><a class="link" href="projects/strain.html" target="_blank">View project ↗</a></p>
+          </article>
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2021</div>
+                <h3>Automotive Exterior System — OEM-Standard Design (Text-Only)</h3>
+              </div>
+            </div>
+            <p>Developed bumper structural components based on OEM Class-A surface data.
+                Applied CATIA V5 for 3D modeling. Collaborated with CAE and tooling teams to ensure stiffness, fit, and mold feasibility under OEM standards.</p>
+            <img class="thumb" src="assets/img/OEM/bumper.png" alt="Representative exterior system illustration" />
+          </article>
+
+          <article class="card">
+            <div class="row">
+              <div>
+                <div class="muted">2021</div>
+                <h3>Jumping Rescue Robot — Spring Mechanism Design</h3>
+              </div>
+            </div>
+            <p>Designed and simulated a spring-actuated jumping robot, integrating mechanical linkage modeling and MATLAB motion analysis.</p>
+            <img class="thumb" src="assets/img/jumping/thumb.png" alt="Jumping rescue robot" />
+            <p><a class="link" href="projects/jumping.html" target="_blank">View project ↗</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="grid-4 cards">
+          
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/solidworks.svg" alt="SolidWorks icon" />
+            <b>3D Modeling</b>
+            <div class="muted">SolidWorks · Creo · CATIA</div>
+          </div>
+
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/gdat.jpg" alt="GD&T icon" />
+            <b>GD&amp;T · Precision Tolerancing</b>
+            <div class="muted">ASME Y14.5</div>
+          </div>
+
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/ansys.svg" alt="FEA icon" />
+            <b>Thermal / Structural Analysis</b>
+            <div class="muted">ANSYS · COMSOL · Abaqus</div>
+          </div>
+
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/iso.svg" alt="ISO icon" />
+            <b>Quality & Compliance</b>
+            <div class="muted">ISO 9001 · ISO 13485 · Documentation</div>
+          </div>
+
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/minitab.jpeg" alt="DFM icon" />
+            <b>DFM & Manufacturing Process</b>
+            <div class="muted">DFM · PFMEA · PPAP · Work Instructions</div>
+          </div>
+
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/Mechatronics.png" alt="mechatronics icon" />
+            <b>Mechatronics Integration</b>
+            <div class="muted">Actuators · Sensors · Pneumatics</div>
+          </div>
+
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/embedded.svg" alt="embedded icon" />
+            <b>Embedded System</b>
+            <div class="muted">Raspbarry Pi · ESP32 · Jetson Nano</div>
+          </div>
+
+          <div class="card center">
+            <img class="skill-icon" src="assets/img/icons/python.svg" alt="python icon" />
+            <b>Programming</b>
+            <div class="muted">Python · C++</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 Raymond Yang · Built with &#9881;&#65039; & &#9889;&#65039;</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-lg">Raymond Yang</div>
+        <div class="muted">Mechanical / Manufacturing Engineer</div>
+      </div>
+    </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
